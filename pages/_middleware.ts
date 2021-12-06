@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(req: NextRequest) {
   const basicAuth = req.headers.get('authorization')
+  console.log("trying to log in");
 
   if (basicAuth) {
     const auth = basicAuth.split(' ')[1]
